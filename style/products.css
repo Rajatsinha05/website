@@ -1,0 +1,15 @@
+#parent-div{
+display:flex; ;
+}
+#category{
+    border: 1px solid black;
+   width: 20%;
+   height: 100vh;
+}
+#products{
+    border: 1px solid black;
+   width: 80%;
+   height: 100vh;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+}

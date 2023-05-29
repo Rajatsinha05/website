@@ -9,6 +9,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
   if (email == user.email && password == user.password) {
     alert("logged in");
+    localStorage.setItem("loggedIn", true);
     window.location.href = "/website/index.html";
   } else {
     alert("Invalid");
