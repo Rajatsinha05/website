@@ -1,3 +1,5 @@
+import nav from "../components/Nav.js";
+
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
   let user = {
@@ -11,3 +13,5 @@ document.querySelector("form").addEventListener("submit", function (event) {
   localStorage.setItem("user", JSON.stringify(user));
   console.log(user);
 });
+
+document.getElementById("nav").innerHTML=nav()

@@ -1,3 +1,5 @@
+import nav from '../components/Nav.js'
+
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
   let user = JSON.parse(localStorage.getItem("user"));
@@ -15,3 +17,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
     alert("Invalid");
   }
 });
+console.log(nav);
+
+document.getElementById("nav").innerHTML=nav()

@@ -1,3 +1,5 @@
+import nav from "../components/Nav.js";
+
 let show=(data)=>{
     console.log(data);
     document.getElementById("products").innerHTML=""
@@ -23,6 +25,15 @@ let div=document.createElement("div")
 div.append(img,title,category,price,rating,divbtn)  
 document.getElementById("products").append(div)
 
+btn.addEventListener("click",()=>{
+    let cart=JSON.parse(localStorage.getItem("cart"))||[]
+    console.log(ele);
+    cart.push(ele);
+    localStorage.setItem("cart",JSON.stringify(cart));
+
+} )
+
+
 })
 }
 
@@ -32,3 +43,5 @@ document.getElementById("products").append(div)
 fetch('https://fakestoreapi.com/products')
 .then((response)=>response.json())
 .then((data)=>show(data));
+
+document.getElementById("nav").innerHTML=nav()

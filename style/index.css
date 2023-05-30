@@ -3,12 +3,13 @@
     justify-content: space-around;
     text-align: center;
     background-color: rgb(13, 14, 15);
+    padding: 10px;
  
 }
 
 #nav p{
     
-    font-size: 20px;
+    font-size: 30px;
     color: aliceblue;
 }
 #nav a{
@@ -20,4 +21,9 @@ img{
 #parent-box div>h1{
     font-size: 40px;
     text-align: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
