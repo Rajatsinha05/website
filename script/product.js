@@ -32,7 +32,7 @@ let show = (data) => {
 
       cart.map((item) => {
         if (item.id == ele.id) {
-            console.log(item);
+          console.log(item);
           cart.push({ ...item, qty: item.qty++ });
           exist = true;
         }
@@ -53,5 +53,5 @@ fetch("https://fakestoreapi.com/products")
 
 document.getElementById("nav").innerHTML = nav();
 
-let arr=[3,5,6,6,5,6,7,6,7,6]
-console.log([...arr,45,6,8,789,8,8]);
+let arr = [3, 5, 6, 6, 5, 6, 7, 6, 7, 6];
+console.log([...arr, 45, 6, 8, 789, 8, 8]);
