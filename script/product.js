@@ -31,17 +31,18 @@ let show = (data) => {
       // checking for existing cart
       cart.map((item, idx) => {
         if (item.id == ele.id) {
-            console.log(item);
-          cart.push({ ...item, qty: item.qty++ });
-          exist = true;
+          cart[idx].qty += 1;
+          exists = true;
         }
       });
 
       if (!exists) {
         cart.push({ ...ele, qty: 1 });
-        localStorage.setItem("cart", JSON.stringify(cart));
+
         alert("added to cart");
       }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
     });
   });
 };
@@ -52,5 +53,4 @@ fetch("https://fakestoreapi.com/products")
 
 document.getElementById("nav").innerHTML = nav();
 
-let arr=[3,5,6,6,5,6,7,6,7,6]
-console.log([...arr,45,6,8,789,8,8]);
+
