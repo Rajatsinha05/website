@@ -27,21 +27,20 @@ let show = (data) => {
 
     btn.addEventListener("click", () => {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-      let exist = false;
-
-      cart.map((item) => {
+      let exists = false;
+      // checking for existing cart
+      cart.map((item, idx) => {
         if (item.id == ele.id) {
-          console.log(item);
+            console.log(item);
           cart.push({ ...item, qty: item.qty++ });
           exist = true;
         }
       });
 
-      if (exist == false) {
+      if (!exists) {
         cart.push({ ...ele, qty: 1 });
         localStorage.setItem("cart", JSON.stringify(cart));
-        window.location.reload();
+        alert("added to cart");
       }
     });
   });
@@ -53,5 +52,5 @@ fetch("https://fakestoreapi.com/products")
 
 document.getElementById("nav").innerHTML = nav();
 
-let arr = [3, 5, 6, 6, 5, 6, 7, 6, 7, 6];
-console.log([...arr, 45, 6, 8, 789, 8, 8]);
+let arr=[3,5,6,6,5,6,7,6,7,6]
+console.log([...arr,45,6,8,789,8,8]);
